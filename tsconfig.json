@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                                  
+    "module": "commonjs",                                
+    "moduleResolution": "Node",
+    "allowJs": true,                                    
+    "checkJs": true,                                    
+    "outDir": "dist",                                   
+    "allowSyntheticDefaultImports": true,              
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,                                      
+    "skipLibCheck": true                                 
+  }
+}
