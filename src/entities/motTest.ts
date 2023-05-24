@@ -1,6 +1,6 @@
 import { EntitySchema } from "@mikro-orm/core";
 
-export interface MotTest {
+export interface IMotTest {
     dvlaId: number;
     testType: TestType;
     vin: string;
@@ -11,7 +11,7 @@ export enum TestType {
     DVA = 'dva',
 }
 
-export const MotTestSchema = new EntitySchema<MotTest>({
+export const MotTest = new EntitySchema<IMotTest>({
     name: 'MotTest',
     properties: {
         dvlaId: { type: Number, primary: true },

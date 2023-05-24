@@ -2,9 +2,12 @@
   "name": "ormtest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p .",
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:schema:recreate": "npx mikro-orm schema:fresh --run"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +18,14 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@mikro-orm/core": "^5.7.9",
-    "@mikro-orm/sqlite": "^5.7.9"
+    "@mikro-orm/cli": "5.7.10",
+    "@mikro-orm/core": "5.7.10",
+    "@mikro-orm/sqlite": "5.7.10"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts"
+    ]
   }
 }
